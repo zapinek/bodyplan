@@ -1,9 +1,9 @@
-package com.example.service;
+package cz.bodyplan.service;
 
 
 import java.util.List;
 
-import com.example.model.Person;
+import cz.bodyplan.model.Person;
 
 public interface PersonService {
     
