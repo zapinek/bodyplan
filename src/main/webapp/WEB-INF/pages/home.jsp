@@ -3,14 +3,33 @@
 <div>
 	<form:form commandName="entryForm" method="post">
 		<fieldset>
-			<label>Muz: <form:radiobutton path="sex" value="MALE" /></label>
-			<label>Zena: <form:radiobutton path="sex" value="FEMALE" /></label>
+			<label>
+				Muz:
+				<form:radiobutton path="sex" value="MALE" />
+			</label>
+			<label>
+				Zena:
+				<form:radiobutton path="sex" value="FEMALE" />
+			</label>
+			<span class="error-message"><form:errors path="sex" /></span>
 			<br />
-			<label>Vaha: <form:input path="weight" type="number" /> kg</label>
+			<label>
+				Vaha:
+				<form:input path="weight" type="number" /> kg
+				<span class="error-message"><form:errors path="weight" /></span>
+			</label>
 			<br />
-			<label>Vyska: <form:input path="height" type="number" /> cm</label>
+			<label>
+				Vyska:
+				<form:input path="height" type="number" /> cm
+				<span class="error-message"><form:errors path="height" /></span>
+			</label>
 			<br />
-			<label>Vek: <form:input path="age" type="number" /> let</label>
+			<label>
+				Vek:
+				<form:input path="age" type="number" /> let
+				<span class="error-message"><form:errors path="age" /></span>
+			</label>
 		</fieldset>
 		
 		<fieldset>
@@ -20,6 +39,7 @@
 					<form:option value="MEDIUM">14 - 22 %</form:option>
 					<form:option value="HIGH">vice nez 22 %</form:option>
 				</form:select>
+				<span class="error-message"><form:errors path="bodyFat" /></span>
 			</label>
 			<br />
 			<label>Zivotni styl:
@@ -30,6 +50,7 @@
 					<form:option value="VERYACTIVE">velmi aktivni</form:option>
 					<form:option value="EXTREMELYACTIVE">extremne aktivni</form:option>
 				</form:select>
+				<span class="error-message"><form:errors path="activityCoeficient" /></span>
 			</label>
 		</fieldset>
 		
@@ -40,6 +61,7 @@
 					<form:option value="MAINTAIN">citit se lepe</form:option>
 					<form:option value="BUILDMUSCLE">nabrat svaly</form:option>
 				</form:select>
+				<span class="error-message"><form:errors path="personalGoal" /></span>
 			</label>
 		</fieldset>
 		<input type="submit" value="Spocitat" />

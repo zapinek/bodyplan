@@ -1,3 +1,4 @@
 <%@ include file="/WEB-INF/pages/fragments/static.jsp" %>
 
-Tohle je footer
+<br />
+&copy; BodyPlan.cz 2014
