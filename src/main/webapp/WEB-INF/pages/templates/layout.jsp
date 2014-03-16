@@ -4,11 +4,14 @@
 <!--[if IE 9]><html class="lt-ie10" lang="en" ><![endif]-->
 <html class="no-js" lang="cs" >
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/stylesheet.css" />
 		<title><tiles:insertAttribute name="title" /></title>
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/stylesheet.css" />
+		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/normalize.css">
+  		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/foundation.min.css">
+		<script src="${pageContext.request.contextPath}/js/vendor/modernizr.js"></script>
 		<tiles:insertAttribute name="head" />
 		
 	</head>
@@ -24,8 +27,10 @@
 			</div>
 			<tiles:insertAttribute name="footer" />
 		</section>
-		
-		<script type='text/javascript' src='${pageContext.request.contextPath}/js/bodyplan.js'></script>
+
+		<script src="${pageContext.request.contextPath}/js/bodyplan.js"></script>		
+		<script src="${pageContext.request.contextPath}/js/vendor/jquery.js"></script>
+  		<script src="${pageContext.request.contextPath}/js/foundation.min.js"></script>
 				
 		<tiles:insertAttribute name="scripts" />
 		
