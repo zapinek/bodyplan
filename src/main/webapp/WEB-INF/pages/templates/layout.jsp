@@ -9,9 +9,9 @@
 		<meta name="description" content="" />
 		<title><tiles:insertAttribute name="title" /></title>
 		<link rel="stylesheet" type="text/css" href="css/stylesheet.css" />
-		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/normalize.css">
-  		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/foundation.min.css">
-		<script src="${pageContext.request.contextPath}/js/vendor/modernizr.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+  		<link rel="stylesheet" type="text/css" href="css/foundation.min.css">
+		<script src="js/vendor/modernizr.js"></script>
 		<tiles:insertAttribute name="head" />
 		
 	</head>
@@ -28,9 +28,9 @@
 			<tiles:insertAttribute name="footer" />
 		</section>
 
-		<script src="${pageContext.request.contextPath}/js/bodyplan.js"></script>		
-		<script src="${pageContext.request.contextPath}/js/vendor/jquery.js"></script>
-  		<script src="${pageContext.request.contextPath}/js/foundation.min.js"></script>
+		<script src="js/bodyplan.js"></script>		
+		<script src="js/vendor/jquery.js"></script>
+  		<script src="js/foundation.min.js"></script>
 				
 		<tiles:insertAttribute name="scripts" />
 		
