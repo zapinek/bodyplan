@@ -1,3 +1,4 @@
+<%@ page pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/pages/fragments/static.jsp" %>
 
 <div id="head">
@@ -5,105 +6,114 @@
 		<div class="small-12 columns">
 			<div class="text-center">
 				<h2>
-					Je cas splnit tvuj sen na zdrave a pysne telo.<br />
-					Ted.
+					Je čas splnit tvůj sen na zdravé a pyšné tělo.<br />
+					Teď.
 				</h2>
 			</div>
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-6 columns text-right">
-			Za tyden ti zmenim mysleni. Za mesic ti zmenim telo.<br />
-			A za 90 dni kompletne zmenim vnimani lidi kolem tebe.<br />
-			<span class="quote">- Jmeno Prijmeni, bodyplan guru</span>
+		<div class="small-12 large-8 columns text-right">
+			<div class="quote">
+			Za týden Ti změním myšlení. Za měsíc Ti změním tělo.<br />
+			A za 90 dní kompletně změním vnímání lidí kolem Tebe.<br />
+			</div>
+			<span class="quoted">- Jarda Zapadlo, bodyplan guru</span>
 		</div>
-		<div class="small-6 columns text-left">
-			<input type="button" class="button" value="To me zajima!" onclick="return false;" />
+		<div class="small-12 large-4 columns text-left">
+			<input type="button" class="button" value="To mě zajímá!" onclick="return false;" />
 		</div>
 	</div>
 </div>
 
 <div id="details">
 	<div class="row">
+		<div id="main-img" class="small-12 columns text-center">
+			<img src="<c:out value="/img/macbook.png"/>" />
+		</div>
+	</div>
+	<div class="row">
 		<div class="small-12 columns">
-			<h3>OSOBNI TRENERI S VYSLEDKY PRO TVORBU OSOBNICH PLANU</h3>
+			<h3>OSOBNÍ TRENÉŘI S VÝSLEDKY PRO TVORBU OSOBNÍCH PLÁNŮ</h3>
 		</div>
 	</div>
-	<div class="row">
-		<div class="small-12 large-6 columns">
-			<div class="row">
-				<div class="small-6 columns text-left">
-					&lt;ICO&gt;
+	<div id="thin-container">
+		<div class="row first-row">
+			<div class="small-12 large-6 columns">
+				<div class="row">
+					<div class="small-6 columns text-left">
+						<img src="<c:out value="/img/ico_contact.png"/>" />
+					</div>
+					<div class="small-6 columns text-right">
+						<h4>NASTAV</h4>
+					</div>
 				</div>
-				<div class="small-6 columns text-right">
-					<h4>NASTAV</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-12 columns text-justify">
-					Bodyplan.cz Ti umozni na zaklade popisu Tveho tela vytvoreni nejen jidelnicku den za dnem vcetne seznamu surovin k nakupu u oblibeneho obchodnika, ale take detailni rozpis cviceni , motivacni rozhovory s lidmi, kteri to jiz dokazali a osobni pristup. Kazdy pristup je individualni.
-				</div>
-			</div>
-		</div>
-		<div class="small-12 large-6 columns">
-			<div class="row">
-				<div class="small-6 columns text-left">
-					&lt;ICO&gt;
-				</div>
-				<div class="small-6 columns text-right">
-					<h4>TISKNI</h4>
+				<div class="row">
+					<div class="small-12 columns text-justify">
+						<p class="text">Bodyplan.cz Ti umožní na základě popisu tvého těla vytvoření nejen jídelníčku den za dnem včetně seznamu surovin k nákupu u oblíbeného obchodníka, ale také detailní rozpis cvičení, motivační rozhovory s lidmi, kteří to již dokázali a osobní přístup. Každý přístup je individuální.</p>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="small-12 columns text-justify">
-					Jednotliva data jsou pripravena v tisknutelnem formatu tak, aby formatove odpovidala tomu, jak je budete pouzivat. Do posilovny diskretni seznam cviku na kazdy den, na lednici jidelnicek a do penezenky nakupni seznam s odhadovanou cenou.
+			<div class="small-12 large-6 columns">
+				<div class="row">
+					<div class="small-6 columns text-left">
+						<img src="<c:out value="/img/ico_print.png"/>" />
+					</div>
+					<div class="small-6 columns text-right">
+						<h4>TISKNI</h4>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="small-12 medium-4 columns">
-			<div class="row">
-				<div class="small-4 columns text-left">
-					&lt;ICO&gt;
-				</div>
-				<div class="small-8 columns text-right">
-					<h4>STAHUJ</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-12 columns text-justify">
-					Stahni si seznamy v PDF, podivej se na exkluzivni videa od nasich treneru, kteri Ti pomohou dosahnout Tveho cile a budou s tebou v osobnim kontaktu. Pokud nevis, jak na cviky, sahni do nasi komplexni databaze, ktera je cela v cestine a ukazuje cviky, ktere Ti byly doporuceny.
+				<div class="row">
+					<div class="small-12 columns text-justify">
+						<p class="text">Jednotlivá data jsou připravena v tisknutelném formátu tak, aby formátově odpovídala tomu, jak je budete používat. Do posilovny diskrétní seznam cviků na každý den, na lednici jídelníček a do peněženky nákupní seznam s odhadovanou cenou.</p>
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="small-12 medium-4 columns">
-			<div class="row">
-				<div class="small-4 columns text-left">
-					&lt;ICO&gt;
+		<div class="row second-row">
+			<div class="small-12 medium-4 columns">
+				<div class="row">
+					<div class="small-3 columns text-left">
+						<img src="<c:out value="/img/ico_download.png"/>" />
+					</div>
+					<div class="small-9 columns text-right">
+						<h4>STAHUJ</h4>
+					</div>
 				</div>
-				<div class="small-8 columns text-right">
-					<h4>KONTROLUJ SE</h4>
-				</div>
-			</div>
-			<div class="row">
-				<div class="small-12 columns text-justify">
-					Stahni si seznamy v PDF, podivej se na exkluzivni videa od nasich treneru, kteri Ti pomohou dosahnout Tveho cile a budou s tebou v osobnim kontaktu. Pokud nevis, jak na cviky, sahni do nasi komplexni databaze, ktera je cela v cestine a ukazuje cviky, ktere Ti byly doporuceny.
-				</div>
-			</div>
-		</div>
-		<div class="small-12 medium-4 columns">
-			<div class="row">
-				<div class="small-4 columns text-left">
-					&lt;ICO&gt;
-				</div>
-				<div class="small-8 columns text-right">
-					<h4>UZDRAV SE</h4>
+				<div class="row">
+					<div class="small-12 columns text-justify">
+						<p class="text">Stáhni si seznamy v PDF, podívej se na exkluzivní videa od našich trenérů, kteří Ti pomohou dosáhnout Tvého cíle a budou s Tebou v osobním kontaktu. Pokud nevíš, jak na cviky, sáhni do naší komplexní databáze, která je celá v češtině a ukazuje cviky, které Ti byly doporučeny.</p>
+					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="small-12 columns text-justify">
-					Stahni si seznamy v PDF, podivej se na exkluzivni videa od nasich treneru, kteri Ti pomohou dosahnout Tveho cile a budou s tebou v osobnim kontaktu. Pokud nevis, jak na cviky, sahni do nasi komplexni databaze, ktera je cela v cestine a ukazuje cviky, ktere Ti byly doporuceny.
+			<div class="small-12 medium-4 columns">
+				<div class="row">
+					<div class="small-3 columns text-left">
+						<img src="<c:out value="/img/ico_food.png"/>" />
+					</div>
+					<div class="small-9 columns text-right">
+						<h4>KONTROLUJ SE</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns text-justify">
+						<p class="text">Všichni mají občas problémy s motivací. Motivace pramení z disciplíny a disciplína pramení z kvalitně sestaveného plánu, který žije. Každých 14 dní dochází k aktualizovanému měření Tvých hodnot a upravuje se plán na další týden - opět individuálně.</p>
+					</div>
+				</div>
+			</div>
+			<div class="small-12 medium-4 columns">
+				<div class="row">
+					<div class="small-3 columns text-left">
+						<img src="<c:out value="/img/ico_vaha.png"/>" />
+					</div>
+					<div class="small-9 columns text-right">
+						<h4>UZDRAV SE</h4>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns text-justify">
+						<p class="text">Nikdo z nás není teoretik a nevěříme na diety z časopisů, při kterých máte hlad. Věříme na desítky let společných zkušeností, omylů a přešlapů, které jsme udělali při honbě za dokonalejším tělem. Nech si poradit od lidí, kteří mají výsledky, a buď jako oni - zdraví, silní a pyšní na to, co dokázali.</p>
+					</div>
 				</div>
 			</div>
 		</div>

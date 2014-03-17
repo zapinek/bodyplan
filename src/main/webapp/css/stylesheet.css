@@ -1,16 +1,24 @@
 body {
+	font-family: 'Open Sans', sans-serif;
 	color: #555;
+	line-height: 1.2;
+}
+
+h1, h2, h3, h4, h5 {
+	font-family: 'Open Sans', sans-serif;
 }
 
 #head {
 	background: #e0e0e0;
-	padding: 100px 0 50px 0;
+	padding: 100px 0 200px 0;
 }
 
 #head h2 {
 	color: #555;
-	margin: 0 0 30px 0;
-	line-height: 1;
+	margin: 0 0 40px 0;
+	line-height: 1.2;
+	font-weight: lighter;
+	font-size: 2.8rem;
 }
 
 #details {
@@ -20,27 +28,70 @@ body {
 #details h3 {
 	color: #555;
 	text-align: center;
+	margin-bottom: 10px;
+	font-size: 1.6rem;
 }
 
-
-#details h4 {
-	color: #555;
-}
 
 #head .button {
-	background: #d29d41;
+	background: #e2b769;
 	color: #633a06;
 	text-shadow: 0px 1px 1px #ECCD97;
 	font-weight: bold;
+	padding: 25px 40px;
 }
 
 .quote {
+	line-height: 1.5;
+	font-size: 110%;
+	color: #000;
+}
+
+.quoted {
 	font-size: 85%;
 	font-style: italic;
 	color: #838383;
+	line-height: 2;
+}
+
+#main-img {
+	overflow: visible;
+	height: 305px;
+}
+
+#main-img img {
+	position: relative;
+	bottom: 190px;
 }
 
 .error-message {
 	color: red;
 	font-weight: bold;
+}
+
+#thin-container .first-row {
+	margin-bottom: 20px;
+}
+
+#thin-container .second-row .text {
+	font-size: 13px;
+}
+
+#thin-container {
+	max-width: 53rem;
+	font-size: 90%;
+	margin: 0 auto;
+}
+
+#thin-container h4 {
+	margin: 0;
+	padding: 0;
+	color: #555;
+	padding-top: 5px;
+}
+
+#thin-container .text {
+	margin-top: 15px;
+	line-height: 1.2;
+	font-size: 14px;
 }
