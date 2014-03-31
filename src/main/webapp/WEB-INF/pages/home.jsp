@@ -124,54 +124,89 @@
 	<form:form commandName="entryForm" method="post">
 		<div class="row">
 			<div class="small-12 medium-6 columns">
-				<label>
-					Muz:
-					<form:radiobutton path="sex" value="MALE" />
-				</label>
-				<label>
-					Zena:
-					<form:radiobutton path="sex" value="FEMALE" />
-				</label>
-				<span class="error-message"><form:errors path="sex" /></span>
-				<br />
-				<label>
-					Vaha:
-					<form:input path="weight" type="number" /> kg
-					<span class="error-message"><form:errors path="weight" /></span>
-				</label>
-				<br />
-				<label>
-					Vyska:
-					<form:input path="height" type="number" /> cm
-					<span class="error-message"><form:errors path="height" /></span>
-				</label>
-				<br />
-				<label>
-					Vek:
-					<form:input path="age" type="number" /> let
-					<span class="error-message"><form:errors path="age" /></span>
-				</label>
+				<div class="row">
+					<div class="small-12 columns" style="padding-right: 15px;">
+						<div class="row">
+							<div class="small-12 columns form-step-1">
+								<h4>Pojďme na to</h4>
+								<h5>Vyplň, kdo jsi teď.</h5>
+								<div class="row" id="female-male-container">
+									<div class="small-4 columns text-left">
+										<img src="<c:out value="/img/male.png"/>" />
+										Muž
+									</div>
+									<div class="small-4 columns text-center">nebo</div>
+									<div class="small-4 columns text-right">
+										Žena
+										<img src="<c:out value="/img/female.png"/>" />
+									</div>
+									<span class="error-message"><form:errors path="sex" /></span>
+								</div>
+								<div style="display: none;">
+									<form:radiobutton path="sex" value="MALE" />
+									<form:radiobutton path="sex" value="FEMALE" />
+								</div>
+								<div>
+									<form:input path="weight" type="number" cssClass="weight" placeholder="Váha v kilogramech" />
+									<form:input path="height" type="number" cssClass="height" placeholder="Výška v centimetrech" />
+									<form:input path="age" type="number" cssClass="age" placeholder="Věk" />
+								</div>
+								<span class="error-message"><form:errors path="weight" /></span>
+								<span class="error-message"><form:errors path="height" /></span>
+								<span class="error-message"><form:errors path="age" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 			<div class="small-12 medium-6 columns">
-				<label>Procento telesneho tuku:
-					<form:select path="bodyFat">
-						<form:option value="LOW">mene nez 14 %</form:option>
-						<form:option value="MEDIUM">14 - 22 %</form:option>
-						<form:option value="HIGH">vice nez 22 %</form:option>
-					</form:select>
-					<span class="error-message"><form:errors path="bodyFat" /></span>
-				</label>
-				<br />
-				<label>Zivotni styl:
-					<form:select path="activityCoeficient">
-						<form:option value="SEDENTARY">sedavy</form:option>
-						<form:option value="LIGHTLYACTIVE">lehce aktivni</form:option>
-						<form:option value="MODERATELYACTIVE">stredne aktivni</form:option>
-						<form:option value="VERYACTIVE">velmi aktivni</form:option>
-						<form:option value="EXTREMELYACTIVE">extremne aktivni</form:option>
-					</form:select>
-					<span class="error-message"><form:errors path="activityCoeficient" /></span>
-				</label>
+				<div class="row">
+					<div class="small-12 columns" style="padding-left: 15px;">
+						<div class="row">
+							<div class="small-12 columns form-step-2">
+								<h4>Jaký jsi teď</h4>
+								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 3;">Procento tělesného tuku</div>
+								<div class="row fat">
+									<div class="small-4 columns fat-1">
+										<img src="<c:out value="/img/fat1.png"/>" />
+										<div class="fat-title">
+											Méně než 14%
+										</div>
+									</div>
+									<div class="small-4 columns fat-2">
+										<img src="<c:out value="/img/fat2.png"/>" />
+										<div class="fat-title">
+											14% až 22%
+										</div>
+									</div>
+									<div class="small-4 columns fat-3">
+										<img src="<c:out value="/img/fat3.png"/>" />
+										<div class="fat-title">
+											Více než 22%
+										</div>
+									</div>
+								</div>
+								
+								<form:select path="bodyFat" style="display: none;">
+									<form:option value="LOW">mene nez 14 %</form:option>
+									<form:option value="MEDIUM">14 - 22 %</form:option>
+									<form:option value="HIGH">vice nez 22 %</form:option>
+								</form:select>
+								<span class="error-message"><form:errors path="bodyFat" /></span>
+								
+								<form:select path="activityCoeficient">
+									<form:option value="">Vyber svůj životní styl</form:option>
+									<form:option value="SEDENTARY">Sedavý</form:option>
+									<form:option value="LIGHTLYACTIVE">Lehce aktivní</form:option>
+									<form:option value="MODERATELYACTIVE">Středně aktivní</form:option>
+									<form:option value="VERYACTIVE">Velmi aktivní</form:option>
+									<form:option value="EXTREMELYACTIVE">Extrémně aktivní</form:option>
+								</form:select>
+								<span class="error-message"><form:errors path="activityCoeficient" /></span>
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 		
