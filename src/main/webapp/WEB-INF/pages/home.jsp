@@ -254,7 +254,7 @@
 		
 		<div class="row">
 			<div class="small-12 columns text-right">
-				<input type="submit" class="button submit-button" value="Spocitat" />
+				<input type="submit" class="button submit-button" value="Spočítat" />
 			</div>
 		</div>
 	</form:form>
