@@ -33,7 +33,8 @@ h1, h2, h3, h4, h5 {
 }
 
 
-#head .button {
+#head .button,
+.button.submit-button {
 	background: #e2b769;
 	color: #633a06;
 	text-shadow: 0px 1px 1px #ECCD97;
@@ -73,13 +74,8 @@ h1, h2, h3, h4, h5 {
 	margin-bottom: 20px;
 }
 
-#thin-container .second-row .text {
-	font-size: 13px;
-}
-
 #thin-container {
-	max-width: 53rem;
-	font-size: 90%;
+	max-width: 63rem;
 	margin: 0 auto;
 }
 
@@ -100,33 +96,33 @@ h1, h2, h3, h4, h5 {
 	background: #e0e0e0;
 }
 
-.form-step-1,
-.form-step-2 {
+.form-step {
 	background: #f1f2f4;
 	border-radius: 10px;
-	margin: 50px 0;
+	margin: 0;
 	padding: 30px 50px 50px 50px !important;
 	box-shadow: 0 1px 1px 1px #8d8d8d;
 	color: #737478;
-	height: 555px;
 }
 
-.form-step-1 {
+.form-step.step-1,
+.form-step.step-2 {
+	min-height: 555px;
+}
+
+.form-step.step-1 {
 	font-size: 110%;
 }
 
-.form-step-1 h4,
-.form-step-2 h4 {
+.form-step h4 {
 	text-align: center;
 	font-size: 2rem;
 	line-height: 1;
 	color: #555;
 }
 
-.form-step-1 h5,
-.form-step-2 h5 {
+.form-step h5 {
 	text-align: center;
-	color: #838489;
 	font-size: 1.2rem;
 	line-height: 1.2;
 	color: #555;
@@ -138,28 +134,33 @@ h1, h2, h3, h4, h5 {
 	font-size: 120%;
 }
 
-#female-male-container .text-left,
-#female-male-container .text-right {
+#form-male,
+#form-female {
 	font-style: normal;
 	cursor: pointer;
 } 
 
-#female-male-container .text-left img {
+#form-male img {
 	margin-right: 10px;
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
-#female-male-container .text-right img {
+#form-female img {
 	margin-left: 10px;
-	opacity: 0.7;
+	opacity: 0.5;
 }
 
-#female-male-container .text-left:hover img,
-#female-male-container .text-right:hover img {
+#form-male:hover img,
+#form-female:hover img {
 	opacity: 1;
 }
 
-.form-step-1 input[type="number"] {
+#form-male.active img,
+#form-female.active img {
+	opacity: 1;
+}
+
+.form-step.step-1 input[type="number"] {
 	height: 80px;
 	margin: 0;
 	border: 1px solid #b2b3b5;
@@ -171,11 +172,18 @@ h1, h2, h3, h4, h5 {
 	color: #737478
 }
 
-.form-step-1 input[type="number"]:focus {
+.form-step.step-1 input[type="number"]:focus,
+.form-step.step-1 input[type="number"]:hover {
 	background-color: #fff;
 }
 
-.form-step-1 input.weight {
+.form-step.step-2 select:focus,
+.form-step.step-2 select:hover {
+	cursor: pointer;
+	background-color: #fff;
+}
+
+.form-step.step-1 input.weight {
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
 	border-bottom: none;
@@ -183,11 +191,11 @@ h1, h2, h3, h4, h5 {
 	background-image: url('/img/scale.png');
 }
 
-.form-step-1 input.height {
+.form-step.step-1 input.height {
 	background-image: url('/img/ruler.png');
 }
 
-.form-step-1 input.age {
+.form-step.step-1 input.age {
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 	border-bottom: 1px solid #b2b3b5;
@@ -243,11 +251,12 @@ h1, h2, h3, h4, h5 {
 
 .fat-1:hover .fat-title,
 .fat-2:hover .fat-title,
-.fat-3:hover .fat-title {
+.fat-3:hover .fat-title,
+.fat .active .fat-title {
 	background: #d29d41;
 }
 
-.form-step-2 select {
+.form-step.step-2 select {
 	height: 80px;
 	background: url('/img/sofa.png') 20px 50% no-repeat #e6e7eb;
 	color: #737478;
@@ -256,4 +265,43 @@ h1, h2, h3, h4, h5 {
 	font-size: 110%;
 	padding-left: 70px;
 	margin-top: 40px;
+}
+
+.form-step.step-3 .target {
+	cursor: pointer;
+}
+
+.form-step.step-3 .target img {
+	min-height: 98px;
+	margin: 30px;
+}
+
+.form-step.step-3 .target {
+	padding: 0 !important;
+}
+
+.form-step.step-3 .target-title {
+	background: #e3c89b;
+	line-height: 60px;
+	color: #222;
+	font-size: 110%;
+}
+
+.form-step.step-3 .target:first-child {
+	border-right: 1px solid #b2b3b5;
+}
+
+.form-step.step-3 .target:last-child {
+	border-left: 1px solid #b2b3b5;
+}
+
+.form-step.step-3 .target:hover .target-title,
+.targets .active .target-title {
+	background: #d29d41;
+}
+
+.bottom-shadow {
+	background: url('/img/img_shadow_bottom.png') no-repeat 50% 0;
+	height: 40px;
+	background-size: contain;
 }

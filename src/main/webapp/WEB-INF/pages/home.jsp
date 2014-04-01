@@ -121,22 +121,23 @@
 </div>
 
 <div id="entry-form">
-	<form:form commandName="entryForm" method="post">
+	<form:form commandName="entryForm" method="post" class="landing-form">
 		<div class="row">
+			<div class="bottom-shadow"></div>
 			<div class="small-12 medium-6 columns">
 				<div class="row">
 					<div class="small-12 columns" style="padding-right: 15px;">
 						<div class="row">
-							<div class="small-12 columns form-step-1">
+							<div class="small-12 columns form-step step-1">
 								<h4>Pojďme na to</h4>
 								<h5>Vyplň, kdo jsi teď.</h5>
 								<div class="row" id="female-male-container">
-									<div class="small-4 columns text-left">
+									<div class="small-4 columns text-left" onclick="landingForm.setMale();" id="form-male">
 										<img src="<c:out value="/img/male.png"/>" />
 										Muž
 									</div>
 									<div class="small-4 columns text-center">nebo</div>
-									<div class="small-4 columns text-right">
+									<div class="small-4 columns text-right" onclick="landingForm.setFemale();" id="form-female">
 										Žena
 										<img src="<c:out value="/img/female.png"/>" />
 									</div>
@@ -158,28 +159,29 @@
 						</div>
 					</div>
 				</div>
+				<div class="bottom-shadow"></div>
 			</div>
 			<div class="small-12 medium-6 columns">
 				<div class="row">
 					<div class="small-12 columns" style="padding-left: 15px;">
 						<div class="row">
-							<div class="small-12 columns form-step-2">
+							<div class="small-12 columns form-step step-2">
 								<h4>Jaký jsi teď</h4>
 								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 3;">Procento tělesného tuku</div>
 								<div class="row fat">
-									<div class="small-4 columns fat-1">
+									<div class="small-4 columns fat-1" onclick="landingForm.setBodyFat(1);" id="form-fat1">
 										<img src="<c:out value="/img/fat1.png"/>" />
 										<div class="fat-title">
 											Méně než 14%
 										</div>
 									</div>
-									<div class="small-4 columns fat-2">
+									<div class="small-4 columns fat-2" onclick="landingForm.setBodyFat(2);" id="form-fat2">
 										<img src="<c:out value="/img/fat2.png"/>" />
 										<div class="fat-title">
 											14% až 22%
 										</div>
 									</div>
-									<div class="small-4 columns fat-3">
+									<div class="small-4 columns fat-3" onclick="landingForm.setBodyFat(3);" id="form-fat3">
 										<img src="<c:out value="/img/fat3.png"/>" />
 										<div class="fat-title">
 											Více než 22%
@@ -187,11 +189,11 @@
 									</div>
 								</div>
 								
-								<form:select path="bodyFat" style="display: none;">
-									<form:option value="LOW">mene nez 14 %</form:option>
-									<form:option value="MEDIUM">14 - 22 %</form:option>
-									<form:option value="HIGH">vice nez 22 %</form:option>
-								</form:select>
+								<div style="display: none;">
+									<form:radiobutton path="bodyFat" value="LOW" />
+									<form:radiobutton path="bodyFat" value="MEDIUM" />
+									<form:radiobutton path="bodyFat" value="HIGH" />
+								</div>
 								<span class="error-message"><form:errors path="bodyFat" /></span>
 								
 								<form:select path="activityCoeficient">
@@ -207,25 +209,52 @@
 						</div>
 					</div>
 				</div>
+				<div class="bottom-shadow"></div>
 			</div>
 		</div>
 		
 		<div class="row">
 			<div class="small-12 columns">
-				<label>Osobni cil:
-					<form:select path="personalGoal">
-						<form:option value="LOSEWEIGHT">zhubnout</form:option>
-						<form:option value="MAINTAIN">citit se lepe</form:option>
-						<form:option value="BUILDMUSCLE">nabrat svaly</form:option>
-					</form:select>
-					<span class="error-message"><form:errors path="personalGoal" /></span>
-				</label>
+				<div class="row">
+					<div class="small-12 columns form-step step-3">
+						<h4>Definuj svůj cíl</h4>
+						<h5>Společně to zvládnem.</h5>
+						<div class="row targets">
+							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(1);" id="form-target1">
+								<img src="<c:out value="/img/ico_lose_weight.png"/>" />
+								<div class="target-title">
+									Zhubnout
+								</div>
+							</div>
+							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(2);" id="form-target2">
+								<img src="<c:out value="/img/ico_maintain.png"/>" />
+								<div class="target-title">
+									Cítit se lépe
+								</div>
+							</div>
+							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(3);" id="form-target3">
+								<img src="<c:out value="/img/ico_gain.png"/>" />
+								<div class="target-title">
+									Přibrat
+								</div>
+							</div>
+						</div>
+						
+						<div style="display: none;">
+							<form:radiobutton path="personalGoal" value="LOSEWEIGHT" />
+							<form:radiobutton path="personalGoal" value="MAINTAIN" />
+							<form:radiobutton path="personalGoal" value="BUILDMUSCLE" />
+						</div>
+						<span class="error-message"><form:errors path="personalGoal" /></span>
+					</div>
+				</div>
+				<div class="bottom-shadow"></div>
 			</div>
 		</div>
 		
 		<div class="row">
-			<div class="small-12 columns">
-				<input type="submit" class="button" value="Spocitat" />
+			<div class="small-12 columns text-right">
+				<input type="submit" class="button submit-button" value="Spocitat" />
 			</div>
 		</div>
 	</form:form>
