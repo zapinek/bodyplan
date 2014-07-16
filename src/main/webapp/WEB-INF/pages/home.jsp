@@ -29,7 +29,7 @@
 <div id="details">
 	<div class="row">
 		<div id="main-img" class="small-12 columns text-center">
-			<img src="<c:out value="/img/macbook.png"/>" />
+			<img src="<c:url value="/img/macbook.png"/>" />
 		</div>
 	</div>
 	<div class="row">
@@ -42,7 +42,7 @@
 			<div class="small-12 large-6 columns">
 				<div class="row">
 					<div class="small-6 columns text-left">
-						<img src="<c:out value="/img/ico_contact.png"/>" />
+						<img src="<c:url value="/img/ico_contact.png"/>" />
 					</div>
 					<div class="small-6 columns text-right">
 						<h4>NASTAV</h4>
@@ -57,7 +57,7 @@
 			<div class="small-12 large-6 columns">
 				<div class="row">
 					<div class="small-6 columns text-left">
-						<img src="<c:out value="/img/ico_print.png"/>" />
+						<img src="<c:url value="/img/ico_print.png"/>" />
 					</div>
 					<div class="small-6 columns text-right">
 						<h4>TISKNI</h4>
@@ -74,7 +74,7 @@
 			<div class="small-12 medium-4 columns">
 				<div class="row">
 					<div class="small-3 columns text-left">
-						<img src="<c:out value="/img/ico_download.png"/>" />
+						<img src="<c:url value="/img/ico_download.png"/>" />
 					</div>
 					<div class="small-9 columns text-right">
 						<h4>STAHUJ</h4>
@@ -89,7 +89,7 @@
 			<div class="small-12 medium-4 columns">
 				<div class="row">
 					<div class="small-3 columns text-left">
-						<img src="<c:out value="/img/ico_food.png"/>" />
+						<img src="<c:url value="/img/ico_food.png"/>" />
 					</div>
 					<div class="small-9 columns text-right">
 						<h4>KONTROLUJ SE</h4>
@@ -104,7 +104,7 @@
 			<div class="small-12 medium-4 columns">
 				<div class="row">
 					<div class="small-3 columns text-left">
-						<img src="<c:out value="/img/ico_vaha.png"/>" />
+						<img src="<c:url value="/img/ico_vaha.png"/>" />
 					</div>
 					<div class="small-9 columns text-right">
 						<h4>UZDRAV SE</h4>
@@ -129,17 +129,17 @@
 					<div class="small-12 columns" style="padding-right: 15px;">
 						<div class="row">
 							<div class="small-12 columns form-step step-1">
-								<h4>Pojďme na to</h4>
-								<h5>Vyplň, kdo jsi teď.</h5>
+								<h4>Vyzkoušej zdarma</h4>
+								<h5>Vyplň a ihned zjisti, jak dosáhnout svého cíle</h5>
 								<div class="row" id="female-male-container">
 									<div class="small-4 columns text-left" onclick="landingForm.setMale();" id="form-male">
-										<img src="<c:out value="/img/male.png"/>" />
+										<img src="<c:url value="/img/male.png"/>" />
 										Muž
 									</div>
 									<div class="small-4 columns text-center">nebo</div>
 									<div class="small-4 columns text-right" onclick="landingForm.setFemale();" id="form-female">
 										Žena
-										<img src="<c:out value="/img/female.png"/>" />
+										<img src="<c:url value="/img/female.png"/>" />
 									</div>
 									<span class="error-message"><form:errors path="sex" /></span>
 								</div>
@@ -166,86 +166,37 @@
 					<div class="small-12 columns" style="padding-left: 15px;">
 						<div class="row">
 							<div class="small-12 columns form-step step-2">
-								<h4>Jaký jsi teď</h4>
-								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 3;">Procento tělesného tuku</div>
-								<div class="row fat">
-									<div class="small-4 columns fat-1" onclick="landingForm.setBodyFat(1);" id="form-fat1">
-										<img src="<c:out value="/img/fat1.png"/>" />
-										<div class="fat-title">
-											Méně než 14%
-										</div>
-									</div>
-									<div class="small-4 columns fat-2" onclick="landingForm.setBodyFat(2);" id="form-fat2">
-										<img src="<c:out value="/img/fat2.png"/>" />
-										<div class="fat-title">
-											14% až 22%
-										</div>
-									</div>
-									<div class="small-4 columns fat-3" onclick="landingForm.setBodyFat(3);" id="form-fat3">
-										<img src="<c:out value="/img/fat3.png"/>" />
-										<div class="fat-title">
-											Více než 22%
-										</div>
-									</div>
-								</div>
-								
-								<div style="display: none;">
-									<form:radiobutton path="bodyFat" value="LOW" />
-									<form:radiobutton path="bodyFat" value="MEDIUM" />
-									<form:radiobutton path="bodyFat" value="HIGH" />
-								</div>
-								<span class="error-message"><form:errors path="bodyFat" /></span>
+								<h4>Úroveň pohybu a cíl</h4>
+								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 2;">Jak často máš týdně pohyb?</div>
 								
 								<form:select path="activityCoeficient">
 									<form:option value="">Vyber svůj životní styl</form:option>
-									<form:option value="SEDENTARY">Sedavý</form:option>
-									<form:option value="LIGHTLYACTIVE">Lehce aktivní</form:option>
-									<form:option value="MODERATELYACTIVE">Středně aktivní</form:option>
-									<form:option value="VERYACTIVE">Velmi aktivní</form:option>
-									<form:option value="EXTREMELYACTIVE">Extrémně aktivní</form:option>
+									<form:option value="NONE">Nijak necvičím a mám sedavou práci</form:option>
+									<form:option value="WEEK3">3x týdně</form:option>
+									<form:option value="WEEK4">4x týdně</form:option>
 								</form:select>
 								<span class="error-message"><form:errors path="activityCoeficient" /></span>
+								
+								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 2;">Vybrali jsme Ti cíl, ale neboj se jej upravit dle sebe!</div>
+								
+								<form:select path="personalGoal">
+									<form:option value="">Vyber svůj cíl</form:option>
+									<form:option value="LOOSE_RUTHLESS">Zhubnout bezohledně</form:option>
+									<form:option value="LOOSE_AGGRESSIVE">Zhubnout středně agresivně</form:option>
+									<form:option value="LOOSE_RECOMMENDED">Zhubnout učebnicově</form:option>
+									<form:option value="KEEP">Udržet současnou váhu a žít vyváženě</form:option>
+									<form:option value="GAIN_RECOMMEND">Nabrat váhu obezřetně</form:option>
+									<form:option value="GAIN_BOOK">Nabrat váhu učebnicově</form:option>
+									<form:option value="GAIN_AGGRESSIVE">Nabrat váhu agresivně</form:option>
+								</form:select>
+								<span class="error-message"><form:errors path="personalGoal" /></span>
+								
+								<div class="text-center" style="font-size: 120%; margin-top: 10px; line-height: 2;">Tělesný tuk</div>
+								
+								0&nbsp;<form:input type="range" path="bodyFat" min="0" max="1" step="0.1" />&nbsp;100%
+								<span class="error-message"><form:errors path="bodyFat" /></span>
 							</div>
 						</div>
-					</div>
-				</div>
-				<div class="bottom-shadow"></div>
-			</div>
-		</div>
-		
-		<div class="row">
-			<div class="small-12 columns">
-				<div class="row">
-					<div class="small-12 columns form-step step-3">
-						<h4>Definuj svůj cíl</h4>
-						<h5>Společně to zvládnem.</h5>
-						<div class="row targets">
-							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(1);" id="form-target1">
-								<img src="<c:out value="/img/ico_lose_weight.png"/>" />
-								<div class="target-title">
-									Zhubnout
-								</div>
-							</div>
-							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(2);" id="form-target2">
-								<img src="<c:out value="/img/ico_maintain.png"/>" />
-								<div class="target-title">
-									Cítit se lépe
-								</div>
-							</div>
-							<div class="small-4 columns text-center target" onclick="landingForm.setTarget(3);" id="form-target3">
-								<img src="<c:out value="/img/ico_gain.png"/>" />
-								<div class="target-title">
-									Přibrat
-								</div>
-							</div>
-						</div>
-						
-						<div style="display: none;">
-							<form:radiobutton path="personalGoal" value="LOSEWEIGHT" />
-							<form:radiobutton path="personalGoal" value="MAINTAIN" />
-							<form:radiobutton path="personalGoal" value="BUILDMUSCLE" />
-						</div>
-						<span class="error-message"><form:errors path="personalGoal" /></span>
 					</div>
 				</div>
 				<div class="bottom-shadow"></div>
@@ -259,11 +210,3 @@
 		</div>
 	</form:form>
 </div>
-
-<c:if test="${not empty bmr}">
-<div class="row">
-	<div class="small-12 columns">
-		Hodnota BMR: ${bmr}
-	</div>
-</div>
-</c:if>

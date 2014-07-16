@@ -15,17 +15,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
-import cz.bodyplan.component.Calculator;
+import cz.bodyplan.component.JSONRequestor;
 import cz.bodyplan.formData.EntryForm;
 import cz.bodyplan.formData.validation.EntryFormValidator;
+import cz.bodyplan.pojo.BasicPersonalData;
 
 @Controller
-@SessionAttributes("entryForm")
+@SessionAttributes({"entryForm", ""})
 @RequestMapping(HomeController.ACTION)
 public class HomeController {
 
 	@Autowired
-	Calculator calculator;
+	JSONRequestor requestor;
 	
 	public static final String ACTION = "home";
 	public static final String REDIRECT = "redirect:" + ACTION;
@@ -33,6 +34,7 @@ public class HomeController {
 	@RequestMapping(method = RequestMethod.GET)
     public String get(final HttpServletRequest req, final HttpServletResponse res, final Model model) {
 		model.addAttribute("entryForm", new EntryForm());
+		model.addAttribute("basicPersonalData", new BasicPersonalData());
     	return ACTION;
     }
 	
@@ -46,9 +48,12 @@ public class HomeController {
 			return ACTION;
 		}
 		
-		Integer bmr = calculator.getBMR(entryForm.getWeight(), entryForm.getHeight(), entryForm.getAge(), entryForm.getSex(), entryForm.getActivityCoeficient(), entryForm.getPersonalGoal());
-		if (bmr != null) {
-			model.addAttribute("bmr", bmr);
+		BasicPersonalData data = new BasicPersonalData(entryForm.getSex(), entryForm.getWeight(), entryForm.getHeight(), entryForm.getAge(), entryForm.getBodyFat(), entryForm.getActivityCoeficient(), entryForm.getPersonalGoal());
+		if (data != null) {
+			
+			requestor.calcTdee(data);
+			
+			model.addAttribute("basicPersonalData", data);
 		}
 		
 		return ACTION;

@@ -1,7 +1,7 @@
-package cz.bodyplan.formData;
+package cz.bodyplan.pojo;
 
-public class EntryForm {
-	
+public class BasicPersonalData {
+
 	private String sex;
 	private Double weight;
 	private Integer height;
@@ -9,6 +9,22 @@ public class EntryForm {
 	private Double bodyFat;
 	private String activityCoeficient;
 	private String personalGoal;
+
+	/* constructor */
+	
+	public BasicPersonalData() {}
+	
+	public BasicPersonalData(String sex, Double weight, Integer height, Integer age, Double bodyFat, String activityCoeficient,	String personalGoal) {
+		this.sex = sex;
+		this.weight = weight;
+		this.height = height;
+		this.age = age;
+		this.bodyFat = bodyFat;
+		this.activityCoeficient = activityCoeficient;
+		this.personalGoal = personalGoal;
+	}
+	
+	/* getters and setters */
 	
 	public String getSex() {
 		return sex;
