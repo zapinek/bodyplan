@@ -5,7 +5,7 @@
 <div class="row">
 	<div class="col-xs-12">
 		<div id="head"></div>
-		<div class="shadow"></div>
+		<div class="tp-bannershadow tp-shadow1" style="width: 1583px; left: 0px;"></div>
 	</div>
 </div>
 
@@ -88,7 +88,6 @@
 							<div class="white-row">
 								<h3 class="text-center">Vyplň a ihned zjisti, jak dosáhnout svého cíle</h3>
 								<hr class="nomargin-top" />
-								<h4>Vyplň a ihned zjisti, jak dosáhnout svého cíle</h4>
 								
 								<div class="row">
 									<div class="col-xs-12 col-md-6 col-md-offset-3">
@@ -146,7 +145,7 @@
 								
 								<hr class="nomargin-top" />
 								
-								<h4>Jak často máš <strong>pohyb</strong>?</h4>
+								<h6>Jak často máš <strong>pohyb</strong>?</h6>
 								
 								<label>Vyber svůj životní styl
 									<form:select path="activityCoeficient" cssClass="form-control">
@@ -166,6 +165,8 @@
 									</form:select>
 								</label>
 								<span class="error-message"><form:errors path="activityCoeficient" /></span>
+								
+								<br />
 								
 								<h6>Vybrali jsme Ti <strong>cíl</strong>, ale neboj se jej upravit podle sebe!</h6>
 								

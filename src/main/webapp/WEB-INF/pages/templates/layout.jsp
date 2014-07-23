@@ -30,6 +30,7 @@
   		<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/css/stylesheet.css" />
   		
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Oswald:400,700,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 		
 		<!-- Morenizr -->
 		<script type="text/javascript" src="${pageContext.request.contextPath}/plugins/modernizr.min.js"></script>

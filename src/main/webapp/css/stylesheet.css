@@ -6,10 +6,18 @@ body {
 	background: #F4F5F7;
 }
 
+h2, h4 {
+	font-family: 'Oswald', sans-serif;
+}
+
+h6 {
+	font-size: 1.2em;
+}
+
 nav {
 	height: 64px;
 	position: relative;
-	background: #000;
+	background: #404040;
 }
 
 nav #bodyplan-logo {
@@ -81,4 +89,17 @@ input[type="radio"], input[type="checkbox"] {
 
 .landing-form hr {
 	margin: 30px 0;
+}
+
+div.featured-box {
+	padding-bottom: 0;
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+
+	#entryForm .white-row {
+		min-height: 560px;
+	}
+	
 }
