@@ -26,4 +26,5 @@ var landingForm = {
 			$('#form-target3').addClass('active');
 		}
 	}
+
 };

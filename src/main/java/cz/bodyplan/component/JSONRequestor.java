@@ -11,17 +11,21 @@ import org.springframework.stereotype.Component;
 
 import com.google.gson.Gson;
 
-import cz.bodyplan.pojo.BasicPersonalData;
-import cz.bodyplan.pojo.Tdee;
+import cz.bodyplan.api.data.calc.SingleDayRequest;
+import cz.bodyplan.api.data.calc.SingleDayResponse;
+import cz.bodyplan.api.data.calc.TdeeRequest;
+import cz.bodyplan.api.data.calc.TdeeResponse;
 
 @Component
 public class JSONRequestor {
 	
-	public Tdee calcTdee(BasicPersonalData data) {
+	private static final String APIARY_URL = "http://bpbackend.herokuapp.com";
+	
+	public TdeeResponse calcTdee(TdeeRequest req) {
 		
 		String result = null;
 		try {
-			result = doRequest("http://bodyplan.apiary-mock.com/webapi/bp/calc/tdee", data);
+			result = doRequest("/webapi/bp/calc/tdee", req);
 		} catch (Exception e) {
 			return null;
 		}
@@ -31,7 +35,24 @@ public class JSONRequestor {
 		}
 		
 		Gson g = new Gson();
-		return g.fromJson(result, Tdee.class);
+		return g.fromJson(result, TdeeResponse.class);
+	}
+	
+	public SingleDayResponse getSingleDayResponse(SingleDayRequest req) {
+		
+		String result = null;
+		try {
+			result = doRequest("/webapi/bp/calc/singleday", req);
+		} catch (Exception e) {
+			return null;
+		}
+		
+		if (result == null) {
+			return null;
+		}
+		
+		Gson g = new Gson();
+		return g.fromJson(result, SingleDayResponse.class);
 	}
 	
 	private String doRequest(String url, Object data) throws Exception {
@@ -39,7 +60,7 @@ public class JSONRequestor {
 		String json = g.toJson(data);
 		
 		HttpClient client = HttpClientBuilder.create().build();
-		HttpPost post = new HttpPost(url);
+		HttpPost post = new HttpPost(APIARY_URL + url);
 		
 		StringEntity entity = new StringEntity(json);
 		entity.setContentType("application/json");
@@ -47,7 +68,7 @@ public class JSONRequestor {
 		
 		HttpResponse response = client.execute(post);
 		HttpEntity resEntity = response.getEntity();
-		return EntityUtils.toString(resEntity);
+		return EntityUtils.toString(resEntity, "UTF-8");
 		
 	}
 }

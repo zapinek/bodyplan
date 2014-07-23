@@ -4,17 +4,17 @@ public class BasicPersonalData {
 
 	private String sex;
 	private Double weight;
-	private Integer height;
+	private Double height;
 	private Integer age;
 	private Double bodyFat;
 	private String activityCoeficient;
 	private String personalGoal;
 
-	/* constructor */
+	/* constructors */
 	
 	public BasicPersonalData() {}
 	
-	public BasicPersonalData(String sex, Double weight, Integer height, Integer age, Double bodyFat, String activityCoeficient,	String personalGoal) {
+	public BasicPersonalData(String sex, Double weight, Double height, Integer age, Double bodyFat, String activityCoeficient,	String personalGoal) {
 		this.sex = sex;
 		this.weight = weight;
 		this.height = height;
@@ -38,10 +38,10 @@ public class BasicPersonalData {
 	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
-	public Integer getHeight() {
+	public Double getHeight() {
 		return height;
 	}
-	public void setHeight(Integer height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 	public Integer getAge() {

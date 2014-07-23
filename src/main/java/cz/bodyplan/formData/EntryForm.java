@@ -4,7 +4,7 @@ public class EntryForm {
 	
 	private String sex;
 	private Double weight;
-	private Integer height;
+	private Double height;
 	private Integer age;
 	private Double bodyFat;
 	private String activityCoeficient;
@@ -22,10 +22,10 @@ public class EntryForm {
 	public void setWeight(Double weight) {
 		this.weight = weight;
 	}
-	public Integer getHeight() {
+	public Double getHeight() {
 		return height;
 	}
-	public void setHeight(Integer height) {
+	public void setHeight(Double height) {
 		this.height = height;
 	}
 	public Integer getAge() {

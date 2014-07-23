@@ -15,13 +15,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
+import cz.bodyplan.api.data.calc.SingleDayRequest;
+import cz.bodyplan.api.data.calc.SingleDayResponse;
+import cz.bodyplan.api.data.calc.TdeeRequest;
+import cz.bodyplan.api.data.calc.TdeeResponse;
 import cz.bodyplan.component.JSONRequestor;
 import cz.bodyplan.formData.EntryForm;
 import cz.bodyplan.formData.validation.EntryFormValidator;
 import cz.bodyplan.pojo.BasicPersonalData;
 
 @Controller
-@SessionAttributes({"entryForm", ""})
+@SessionAttributes({"tdeeRes", "sdRes"})
 @RequestMapping(HomeController.ACTION)
 public class HomeController {
 
@@ -48,15 +52,25 @@ public class HomeController {
 			return ACTION;
 		}
 		
-		BasicPersonalData data = new BasicPersonalData(entryForm.getSex(), entryForm.getWeight(), entryForm.getHeight(), entryForm.getAge(), entryForm.getBodyFat(), entryForm.getActivityCoeficient(), entryForm.getPersonalGoal());
-		if (data != null) {
-			
-			requestor.calcTdee(data);
-			
-			model.addAttribute("basicPersonalData", data);
-		}
+		Double bodyFat = entryForm.getBodyFat()/100;
 		
-		return ACTION;
+		// request data for tdee
+		TdeeRequest tdeeReq = new TdeeRequest(TdeeRequest.DEFAULT_FORMULA, entryForm.getSex(), entryForm.getHeight(), entryForm.getWeight(), entryForm.getActivityCoeficient(), entryForm.getAge(), entryForm.getPersonalGoal(), bodyFat);
+		TdeeResponse tdeeRes = requestor.calcTdee(tdeeReq);
+		if (tdeeRes == null) {
+			return ACTION;
+		}
+		model.addAttribute("tdeeRes", tdeeRes);
+		
+		// request data for singleday
+		SingleDayRequest sdReq = new SingleDayRequest(TdeeRequest.DEFAULT_FORMULA, entryForm.getSex(), entryForm.getHeight(), entryForm.getWeight(), entryForm.getActivityCoeficient(), entryForm.getAge(), entryForm.getPersonalGoal());
+		SingleDayResponse sdRes = requestor.getSingleDayResponse(sdReq);
+		if (sdRes == null) {
+			return ACTION;
+		}
+		model.addAttribute("sdRes", sdRes);
+		
+		return "redirect:" + FreeController.ACTION;
 	}
 	
 	@InitBinder(value = "entryForm")

@@ -16,14 +16,15 @@
 		<put-attribute name="pageIdentifier" type="string" value="" />
 	</definition>
 
-	<definition name="people" extends="template" >
-		<put-attribute name="content" value="/WEB-INF/pages/people.jsp"/>
-		<put-attribute name="pageIdentifier" type="string" value="peoplePageId" />
-	</definition>
-	
 	<definition name="home" extends="template" >
 		<put-attribute name="content" value="/WEB-INF/pages/home.jsp"/>
 		<put-attribute name="pageIdentifier" type="string" value="homePageId" />
+		<put-attribute name="scripts" value="/WEB-INF/pages/scripts/home.jsp" />
+	</definition>
+	
+	<definition name="free" extends="template" >
+		<put-attribute name="content" value="/WEB-INF/pages/free.jsp"/>
+		<put-attribute name="pageIdentifier" type="string" value="freePageId" />
 	</definition>
 
 </tiles-definitions>
