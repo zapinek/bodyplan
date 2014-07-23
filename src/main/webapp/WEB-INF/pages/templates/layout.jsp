@@ -39,13 +39,11 @@
 	<body id="<tiles:insertAttribute name="pageIdentifier"/>">
 		
 		<section id="pageContainer">
-			<div id="content" class="container">
-				<div class="row">
-					<div class="col-xs-12">
-						<tiles:insertAttribute name="header" />
-						<tiles:insertAttribute name="content" />
-						<tiles:insertAttribute name="footer" />
-					</div>
+			<div class="row">
+				<div class="col-xs-12">
+					<tiles:insertAttribute name="header" />
+					<tiles:insertAttribute name="content" />
+					<tiles:insertAttribute name="footer" />
 				</div>
 			</div>
 		</section>
