@@ -4,8 +4,16 @@
 
 <div class="row">
 	<div class="col-xs-12">
-		<div id="head"></div>
-		<div class="tp-bannershadow tp-shadow1" style="width: 1583px; left: 0px;"></div>
+		<div id="head">
+			<div class="container">
+				<div id="head-text">
+					<span id="head-text-1">Je čas splnit Tvůj sen</span>
+					<br />
+					<span id="head-text-2">na zdravé a pyšné tělo</span>
+				</div>
+				<div id="head-bp-statue-logo"></div>
+			</div>
+		</div>
 	</div>
 </div>
 

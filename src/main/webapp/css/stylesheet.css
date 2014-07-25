@@ -8,6 +8,7 @@ body {
 
 h2, h4 {
 	font-family: 'Oswald', sans-serif;
+	font-weight: 400;
 }
 
 h6 {
@@ -44,10 +45,21 @@ nav ul li {
 #head {
 	height: 230px;
 	background: #e0e0e0;
-	background-image: url('../img/img_header.jpg');
+	background-image: url('../images/main_banner.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	box-shadow: 0 0 40px 5px;
+}
+
+/* Large devices (medium desktops, 1200px and up) */
+@media (max-width: 1199px) {
+
+	#head {
+		left: 130px;
+		background-position: -350px;
+	}
+	
 }
 
 #head h2 {
@@ -96,10 +108,120 @@ div.featured-box {
 }
 
 /* Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
 
 	#entryForm .white-row {
 		min-height: 560px;
 	}
 	
+}
+
+#food-menu .food-type {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.white-row .header {
+	background: #e4e4e4;
+	margin: -10px -10px 10px -10px;
+	padding: 10px;
+	border-radius: 6px;
+}
+
+.white-row .header h4 {
+	margin-bottom: 0;
+}
+
+hr.small {
+	margin: 10px 0;	
+}
+
+.small-note p {
+	font-size: 80%;
+	line-height: 1.1;
+	margin-bottom: 10px;
+}
+
+.bp-logo {
+	background: url('../images/bp_logo.png') no-repeat;	
+}
+
+#head-text {
+	font-weight: 100;
+	font-size: 30px;
+	line-height: 1.9;
+    position: relative;
+    top: 55px;
+    left: 230px;
+}
+
+/* Large devices (medium desktops, 1200px and up) */
+@media (min-width: 768px) and (max-width: 1199px) {
+
+	#head-text {
+		left: 130px;
+	}
+	
+}
+
+/* Large devices (medium desktops, 1200px and up) */
+@media (max-width: 768px) {
+
+	#head-text {
+		font-size: 20px;
+	}
+	
+}
+
+#head-text span {
+	background: #F7CC72;
+	opacity: .9;
+	padding: 5px 10px;
+	color: #666;
+}
+
+#head-text #head-text-2 {
+	font-size: 40px;
+	position: relative;
+	left: 30px;
+}
+
+/* Large devices (medium desktops, 1200px and up) */
+@media (max-width: 768px) {
+	
+	#head-text {
+		line-height: 2;
+		text-align: center;
+		left: inherit;
+		top: 80px;
+	}
+	
+	#head-text #head-text-2 {
+		font-size: 26px;
+		left: 0;
+	}
+	
+}
+
+#head-bp-statue-logo {
+	background: url('../images/bp_logo.png') no-repeat;
+	background-size: contain;
+	height: 220px;
+	width: 220px;
+	position: absolute;
+	right: 20px;
+	top: 10px;
+}
+
+@media (max-width: 992px) {
+	#head-bp-statue-logo {
+		display: none;
+	}
+}
+
+h2 .anchor {
+	color: #7E8998;
+	font-size: 14px;
+	font-family: 'Open Sans', Arial, sans-serif;
+	text-transform: uppercase;
 }

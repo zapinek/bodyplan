@@ -19,7 +19,6 @@ public class SingleDayResponse {
 	private List<Food> foodList;
 	private Double avgCompliance;
 	private Boolean usableMatch;
-	// private Reciepe matchingReciepes;
 	
 	/* getters and setters */
 	
@@ -86,8 +85,6 @@ public class SingleDayResponse {
 	public void setUsableMatch(Boolean usableMatch) {
 		this.usableMatch = usableMatch;
 	}
-	
-	/* inner classes */
 	
 	public static class Food {
 
@@ -179,4 +176,5 @@ public class SingleDayResponse {
 			this.price = price;
 		}
 	}
+
 }
