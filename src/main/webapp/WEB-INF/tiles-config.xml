@@ -16,15 +16,30 @@
 		<put-attribute name="pageIdentifier" type="string" value="" />
 	</definition>
 
-	<definition name="home" extends="template" >
-		<put-attribute name="content" value="/WEB-INF/pages/home.jsp"/>
-		<put-attribute name="pageIdentifier" type="string" value="homePageId" />
-		<put-attribute name="scripts" value="/WEB-INF/pages/scripts/home.jsp" />
+	<definition name="index" extends="template" >
+		<put-attribute name="content" value="/WEB-INF/pages/index.jsp"/>
+		<put-attribute name="pageIdentifier" type="string" value="index-page-id" />
+		<put-attribute name="scripts" value="/WEB-INF/pages/scripts/index.jsp" />
 	</definition>
 	
 	<definition name="free" extends="template" >
 		<put-attribute name="content" value="/WEB-INF/pages/free.jsp"/>
-		<put-attribute name="pageIdentifier" type="string" value="freePageId" />
+		<put-attribute name="pageIdentifier" type="string" value="free-page-id" />
+	</definition>
+
+	<definition name="about" extends="template" >
+		<put-attribute name="content" value="/WEB-INF/pages/about.jsp"/>
+		<put-attribute name="pageIdentifier" type="string" value="about-page-id" />
+	</definition>
+	
+	<definition name="testimonials" extends="template" >
+		<put-attribute name="content" value="/WEB-INF/pages/testimonials.jsp"/>
+		<put-attribute name="pageIdentifier" type="string" value="testimonials-page-id" />
+	</definition>
+	
+	<definition name="legal" extends="template" >
+		<put-attribute name="content" value="/WEB-INF/pages/legal.jsp"/>
+		<put-attribute name="pageIdentifier" type="string" value="legal-page-id" />
 	</definition>
 
 </tiles-definitions>

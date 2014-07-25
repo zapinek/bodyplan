@@ -26,13 +26,13 @@ import cz.bodyplan.pojo.BasicPersonalData;
 
 @Controller
 @SessionAttributes({"tdeeRes", "sdRes"})
-@RequestMapping(HomeController.ACTION)
-public class HomeController {
+@RequestMapping(IndexController.ACTION)
+public class IndexController {
 
 	@Autowired
 	JSONRequestor requestor;
 	
-	public static final String ACTION = "home";
+	public static final String ACTION = "index";
 	public static final String REDIRECT = "redirect:" + ACTION;
    
 	@RequestMapping(method = RequestMethod.GET)

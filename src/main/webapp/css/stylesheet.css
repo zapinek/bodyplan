@@ -15,13 +15,13 @@ h6 {
 	font-size: 1.2em;
 }
 
-nav {
+div.navigation {
 	height: 64px;
 	position: relative;
 	background: #404040;
 }
 
-nav #bodyplan-logo {
+div.navigation #bodyplan-logo {
 	height: 70px;
 	width: 200px;
 	background-image: url('../img/bodyplan-logo.png');
@@ -32,14 +32,16 @@ nav #bodyplan-logo {
 	z-index: 2;
 }
 
+nav li {
+	display: inline-block;
+}
+
 nav ul {
 	float: right;
 }
 
-nav ul li {
-	display: inline-block;
-	padding: 8px 10px;
-	color: #fff;
+nav li {
+	padding: 10px;
 }
 
 #head {
@@ -224,4 +226,19 @@ h2 .anchor {
 	font-size: 14px;
 	font-family: 'Open Sans', Arial, sans-serif;
 	text-transform: uppercase;
+}
+
+#about-page-id #bp-logo {
+	background: url('../images/bp_logo.png') no-repeat center center;
+	background-size: contain;
+	height: 400px;
+	margin-bottom: 50px;
+}
+
+#about-page-id ul {
+	margin-bottom: 20px;
+}
+
+.item-box.fixed-box .fa {
+	font-size: 110px;
 }

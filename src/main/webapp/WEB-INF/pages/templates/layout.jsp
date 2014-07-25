@@ -16,8 +16,6 @@
 		<link href="${pageContext.request.contextPath}/plugins/owl-carousel/owl.theme.css" rel="stylesheet" type="text/css" />
 		<link href="${pageContext.request.contextPath}/plugins/owl-carousel/owl.transitions.css" rel="stylesheet" type="text/css" />
 		<link href="${pageContext.request.contextPath}/plugins/magnific-popup/magnific-popup.css" rel="stylesheet" type="text/css" />
-		<link href="${pageContext.request.contextPath}/css/animate.css" rel="stylesheet" type="text/css" />
-		<link href="${pageContext.request.contextPath}/css/superslides.css" rel="stylesheet" type="text/css" />
 
 		<!-- THEME CSS -->
 		<link href="${pageContext.request.contextPath}/css/essentials.css" rel="stylesheet" type="text/css" />
@@ -40,13 +38,9 @@
 	<body id="<tiles:insertAttribute name="pageIdentifier"/>">
 		
 		<section id="pageContainer">
-			<div class="row">
-				<div class="col-xs-12">
-					<tiles:insertAttribute name="header" />
-					<tiles:insertAttribute name="content" />
-					<tiles:insertAttribute name="footer" />
-				</div>
-			</div>
+			<tiles:insertAttribute name="header" />
+			<tiles:insertAttribute name="content" />
+			<tiles:insertAttribute name="footer" />
 		</section>
 			
 
