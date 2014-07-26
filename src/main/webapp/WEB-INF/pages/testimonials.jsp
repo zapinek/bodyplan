@@ -28,9 +28,9 @@
 					<img src="<c:url value="/assets/images/u01.png" />" alt="" />
 				</figure>
 				<div class="item-box-desc">
-					<h4>John Doe</h4>
+					<h4>David</h4>
 					<small class="styleColor">31 let</small>
-					<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</p>
+					<p>Whoa. To byla teda jízda. Za jeden cyklus jsem shodil v pase, přibral na váze a vyrýsoval svalíky.</p>
 				</div>
 			</div>
 		</div>
@@ -133,7 +133,7 @@
 		<div class="col-sm-4">
 			<div class="item-box fixed-box">
 				<div class="item-box-desc text-center">
-					<a href="#" class="btn btn-primary btn-lg" alt="Přidej se dnes!">Přidej se dnes!</a>
+					<a href="#" class="btn btn-primary btn-lg">Přidej se dnes!</a>
 				</div>
 			</div>
 		</div>

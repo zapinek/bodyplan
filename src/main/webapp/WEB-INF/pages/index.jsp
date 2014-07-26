@@ -1,22 +1,6 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/pages/fragments/static.jsp" %>
 
-
-<div class="row">
-	<div class="col-xs-12">
-		<div id="head">
-			<div class="container">
-				<div id="head-text">
-					<span id="head-text-1">Je čas splnit Tvůj sen</span>
-					<br />
-					<span id="head-text-2">na zdravé a pyšné tělo</span>
-				</div>
-				<div id="head-bp-statue-logo"></div>
-			</div>
-		</div>
-	</div>
-</div>
-
 <div class="container">
 	<hr class="no-lines">
 
@@ -90,9 +74,9 @@
 	
 		<form:form commandName="entryForm" method="post" class="landing-form">
 			<div class="row">
-				<div class="col-xs-12 col-md-8 col-md-offset-2">
+				<div class="col-xs-12 col-md-10 col-md-offset-1">
 					<div class="row">
-						<div class="col-xs-12 col-md-6">
+						<div class="col-xs-12 col-sm-6">
 							<div class="white-row">
 								<h3 class="text-center">Vyplň a ihned zjisti, jak dosáhnout svého cíle</h3>
 								<hr class="nomargin-top" />
@@ -147,7 +131,7 @@
 							</div>
 						</div>
 						
-						<div class="col-xs-12 col-md-6">
+						<div class="col-xs-12 col-sm-6">
 							<div class="white-row">
 								<h3 class="text-center">Úroveň pohybu a cíl<br />&nbsp;</h3>
 								

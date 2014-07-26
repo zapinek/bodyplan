@@ -1,22 +1,13 @@
 <%@ page pageEncoding="UTF-8" %>
 <%@ include file="/WEB-INF/pages/fragments/static.jsp" %>
 
-<div class="navigation">
+<div id="head">
 	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-				
-				<div id="bodyplan-logo"></div>
-				<nav>
-					<ul>
-						<li><a href="<c:url value="/index"/>">Úvod</a></li>
-						<li><a href="<c:url value="/about"/>">O službě</a></li>
-						<li><a href="<c:url value="/testimonials"/>">Výsledky</a></li>
-						<li><a href="#">Zkusit to</a></li>
-						<li><a href="#">Přihlásit se</a></li>
-					</ul>
-				</nav>
-			</div>
+		<div id="head-text">
+			<span id="head-text-1">Je čas splnit Tvůj sen</span>
+			<br />
+			<span id="head-text-2">na zdravé a pyšné tělo</span>
 		</div>
+		<div id="head-bp-statue-logo"></div>
 	</div>
 </div>

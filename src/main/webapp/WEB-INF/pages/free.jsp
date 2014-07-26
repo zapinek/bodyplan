@@ -335,3 +335,9 @@
 		</div>
 	</c:if>
 </div>
+
+<%--
+<div id="donutchart" style="height: 600px;">
+	
+</div>
+--%>

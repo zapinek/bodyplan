@@ -7,16 +7,18 @@
 
 	<!-- DEFAULT MAIN TEMPLATE -->
 	<definition name="template" template="/WEB-INF/pages/templates/layout.jsp">
-		<put-attribute name="header" value="/WEB-INF/pages/fragments/header.jsp"/>
+		<put-attribute name="head" value="/WEB-INF/pages/fragments/head.jsp" />
+		<put-attribute name="navbar" value="/WEB-INF/pages/fragments/navbar.jsp"/>
+		<put-attribute name="header" value="/WEB-INF/pages/fragments/blank.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/pages/fragments/blank.jsp" />
 		<put-attribute name="footer" value="/WEB-INF/pages/fragments/footer.jsp" />
-		<put-attribute name="head" value="/WEB-INF/pages/fragments/blank.jsp" />
 		<put-attribute name="title" value="/WEB-INF/pages/fragments/title.jsp" />
 		<put-attribute name="scripts" value="/WEB-INF/pages/fragments/blank.jsp" />
 		<put-attribute name="pageIdentifier" type="string" value="" />
 	</definition>
 
 	<definition name="index" extends="template" >
+		<put-attribute name="header" value="/WEB-INF/pages/fragments/header.jsp"/>
 		<put-attribute name="content" value="/WEB-INF/pages/index.jsp"/>
 		<put-attribute name="pageIdentifier" type="string" value="index-page-id" />
 		<put-attribute name="scripts" value="/WEB-INF/pages/scripts/index.jsp" />
@@ -25,6 +27,7 @@
 	<definition name="free" extends="template" >
 		<put-attribute name="content" value="/WEB-INF/pages/free.jsp"/>
 		<put-attribute name="pageIdentifier" type="string" value="free-page-id" />
+		<put-attribute name="scripts" value="/WEB-INF/pages/scripts/free.jsp" />
 	</definition>
 
 	<definition name="about" extends="template" >
